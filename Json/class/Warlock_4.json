@@ -2,7 +2,7 @@
   "ClassName": "Warlock",
   "Loot": true,
   "NPCMaxLevels_Below": 4,
-  "PathFilename": "1_Gnome.json",
+  "PathFilename": "_pack\\1-20\\Dwarf.Gnome\\6-10_Dun Morogh.json",
   "PathThereAndBack": true,
   "PathReduceSteps": false,
   "IntVariables": {

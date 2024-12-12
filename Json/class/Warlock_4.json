@@ -11,8 +11,8 @@
   "Pull": {
     "Sequence": [
       {
-        "Name": "Immolate",
-        "Key": "5",
+        "Name": "Shadow Bolt",
+        "Key": "2",
         "HasCastBar": true
       }
     ]

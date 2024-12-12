@@ -1,4 +1,4 @@
-start "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" "http://localhost:5000"
+start "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" "http://192.168.0.19:5000"
 cd /D "%~dp0"
 dotnet run --configuration Release
 

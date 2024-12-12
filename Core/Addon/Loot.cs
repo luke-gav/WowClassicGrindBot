@@ -9,5 +9,5 @@ public enum LootStatus
 
 public static class Loot
 {
-    public const int LOOTFRAME_AUTOLOOT_DELAY = 300;
+    public const int LOOTFRAME_AUTOLOOT_DELAY = 2000;
 }

@@ -102,7 +102,7 @@ public sealed partial class ClassConfiguration
 
     public KeyAction PetAttack { get; } = new()
     {
-        Key = "Subtract",
+        Key = "L",
         Name = nameof(PetAttack),
         PressDuration = InputDuration.VeryFastPress,
         BaseAction = true,

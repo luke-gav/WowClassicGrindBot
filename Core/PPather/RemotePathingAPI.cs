@@ -17,7 +17,7 @@ public sealed class RemotePathingAPI : IPPather, IPathVizualizer, IDisposable
 {
     private readonly ILogger<RemotePathingAPI> logger;
 
-    private readonly string host = "127.0.0.1";
+    private readonly string host = "192.168.0.19";
     private readonly int port = 5001;
 
     private readonly JsonSerializerOptions options;

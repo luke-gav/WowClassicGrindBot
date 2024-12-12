@@ -8,7 +8,7 @@ namespace PathingAPI;
 
 public sealed class Program
 {
-    public static string hostUrl = "http://127.0.0.1:5001";
+    public static string hostUrl = "http://192.168.0.19:5001";
 
     public static void Main(string[] args)
     {

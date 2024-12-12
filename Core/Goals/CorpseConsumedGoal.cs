@@ -46,7 +46,7 @@ public sealed partial class CorpseConsumedGoal : GoapGoal
         {
             goapAgentState.LastCombatKillCount = 0;
         }
-
+wait.Fixed(Loot.LOOTFRAME_AUTOLOOT_DELAY);
         LogConsumed(logger, goapAgentState.LastCombatKillCount, goapAgentState.ConsumableCorpseCount);
 
         SendGoapEvent(new GoapStateEvent(GoapKey.consumecorpse, false));

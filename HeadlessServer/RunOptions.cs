@@ -36,7 +36,7 @@ public sealed class RunOptions
 
     [Option("hostv1",
         Required = false,
-        Default = "localhost",
+        Default = "192.168.0.19",
         HelpText = $"Navigation Remote V1 host")]
     public string? Hostv1 { get; set; }
 
@@ -48,7 +48,7 @@ public sealed class RunOptions
 
     [Option("hostv3",
         Required = false,
-        Default = "127.0.0.1",
+        Default = "192.168.0.19",
         HelpText = $"Navigation Remote V3 host")]
     public string? Hostv3 { get; set; }
 

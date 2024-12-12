@@ -236,7 +236,7 @@ public sealed class ApproachTargetGoal : GoapGoal, IGoapEventListener
     private void RandomJump()
     {
         if (ApproachDurationMs > 2000 &&
-            input.Jump.SinceLastClickMs > Random.Shared.Next(5000, 25_000))
+            input.Jump.SinceLastClickMs > Random.Shared.Next(2000, 5000))
         {
             input.PressJump();
         }

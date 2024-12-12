@@ -241,7 +241,7 @@ The app reads the game state using small blocks of color shown at the top of the
 
     e.g.
     ```ps
-    start "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" "http://localhost:5000"
+    start "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" "http://192.168.0.19:5000"
     c:
     cd C:\WowClassicGrindBot\BlazorServer
     dotnet run -c Release
@@ -305,9 +305,9 @@ For normal quick startup of `HeadlessServer` please look at the `HeadlessServer\
 | `-m`<br>`-mode` | Pathfinder type | `RemoteV3` | `Local` or `RemoteV1` or `RemoteV3` |
 | `-p`<br>`-pid` | World of Warcraft process id | `-1` | open up task manager to find PID |
 | `-r`<br>`-reader` | Addon data screen reader backend | `DXGI` | `DXGI` works since Win8 |
-| `hostv1` | Navigation Remote V1 host | `localhost` | - |
+| `hostv1` | Navigation Remote V1 host | `192.168.0.19` | - |
 | `portv1` | Navigation Remote V1 port | `5001` | - |
-| `hostv3` | Navigation Remote V3 host | `127.0.0.1` | - |
+| `hostv3` | Navigation Remote V3 host | `192.168.0.19` | - |
 | `portv3` | Navigation Remote V3 port | `47111` | - |
 | `-n`<br>`-viz` | While Remote V1 is available, show Path Visualization<br>Can display Remote V3 Paths as well. | `false` | - |
 | `-d`<br>`-diag` | Diagnostics, when set, takes screen captures under `Json\cap\*.jpg` | - | - |
@@ -1992,7 +1992,7 @@ The available modes are:
 
 ## Other devices
 
-The user interface is shown in a browser on port **5000** [http://localhost:5000](http://localhost:5000). This allows you to view it from another device on your lan.
+The user interface is shown in a browser on port **5000** [http://192.168.0.19:5000](http://192.168.0.19:5000). This allows you to view it from another device on your lan.
 
 To access you PC port **5000** from another device, you will need to open up port **5000** in your firewall.
 
@@ -2150,7 +2150,7 @@ cd C:\WowClassicGrindBot\PathingAPI
 dotnet run --configuration Release
 ```
 
-Then in a browser go to http://localhost:5001
+Then in a browser go to http://192.168.0.19:5001
 
 There are 3 pages:
 
@@ -2162,7 +2162,7 @@ There are 3 pages:
 Requests to the API can be done in a new browser tab like this or via the Swagger tab. You can then view the result in the Watch API calls viewer.
 
 ```
-http://localhost:5001/api/PPather/MapRoute?map1=1446&x1=51.0&y1=29.3&map2=1446&x2=38.7&y2=20.1
+http://192.168.0.19:5001/api/PPather/MapRoute?map1=1446&x1=51.0&y1=29.3&map2=1446&x2=38.7&y2=20.1
 ```
 
 Search gives some predefined locations to search from and to.

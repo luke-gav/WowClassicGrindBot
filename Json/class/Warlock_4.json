@@ -92,7 +92,7 @@
         "Name": "Repair",
         "Key": "C",
         "Requirement": "Durability% < 35",
-        "PathFilename": "1_Gnome_Vendor.json",
+        "PathFilename": "5_Gnome_Vendor.json",
         "Cost": 6
       },
       {
@@ -102,7 +102,7 @@
           "BagFull",
           "BagGreyItem"
         ],
-        "PathFilename": "1_Gnome_Vendor.json",
+        "PathFilename": "5_Gnome_Vendor.json",
         "Cost": 6
       }
     ]

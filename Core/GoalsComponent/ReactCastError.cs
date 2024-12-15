@@ -163,49 +163,50 @@ public sealed class ReactCastError
                 break;
             case UI_ERROR.ERR_BADATTACKFACING:
 
-                bool wasAnyAuto =
-                    bits.AutoShot() ||
-                    bits.Auto_Attack() ||
-                    bits.Shoot();
-
-                float beforeDir = playerReader.Direction;
+                // bool wasAnyAuto =
+                //     bits.AutoShot() ||
+                //     bits.Auto_Attack() ||
+                //     bits.Shoot();
+                //
+                // float beforeDir = playerReader.Direction;
 
                 input.PerformCoolRotationJump();
+                wait.Update();
 
-                const int updateCount = 2;
-                float e = wait.AfterEquals(playerReader.SpellQueueTimeMs,
-                    updateCount, playerReader._Direction);
-
-                float sampleTimeMs =
-                    updateCount * (float)addonReader.AvgUpdateLatency;
-
-                if (e > sampleTimeMs)
-                {
-                    stopMoving.Stop();
-                    logger.LogInformation(
-                        $"React to {value.ToStringF()} - " +
-                        $"Fast turn with Interact {e}ms");
-                }
-                else
-                {
-                    logger.LogWarning(
-                        $"Unable to react to {value.ToStringF()} - " +
-                        $"Fast turn with Interact {e}ms");
-                }
-
-                if (!wasAnyAuto)
-                    input.PressStopAttack();
-
-                if (e <= sampleTimeMs && beforeDir == playerReader.Direction)
-                {
-                    stopMoving.Stop();
-                    logger.LogInformation($"React to {value.ToStringF()} - " +
-                        $"Slow turn 180deg");
-                    float targetDir = playerReader.Direction + PI;
-                    if (targetDir > Tau)
-                        targetDir = -Tau;
-                    direction.SetDirection(targetDir, Vector3.Zero);
-                }
+                // const int updateCount = 2;
+                // float e = wait.AfterEquals(playerReader.SpellQueueTimeMs,
+                //     updateCount, playerReader._Direction);
+                //
+                // float sampleTimeMs =
+                //     updateCount * (float)addonReader.AvgUpdateLatency;
+                //
+                // if (e > sampleTimeMs)
+                // {
+                //     stopMoving.Stop();
+                //     logger.LogInformation(
+                //         $"React to {value.ToStringF()} - " +
+                //         $"Fast turn with Interact {e}ms");
+                // }
+                // else
+                // {
+                //     logger.LogWarning(
+                //         $"Unable to react to {value.ToStringF()} - " +
+                //         $"Fast turn with Interact {e}ms");
+                // }
+                //
+                // if (!wasAnyAuto)
+                //     input.PressStopAttack();
+                //
+                // if (e <= sampleTimeMs && beforeDir == playerReader.Direction)
+                // {
+                //     stopMoving.Stop();
+                //     logger.LogInformation($"React to {value.ToStringF()} - " +
+                //         $"Slow turn 180deg");
+                //     float targetDir = playerReader.Direction + PI;
+                //     if (targetDir > Tau)
+                //         targetDir = -Tau;
+                //     direction.SetDirection(targetDir, Vector3.Zero);
+                // }
                 break;
             case UI_ERROR.SPELL_FAILED_MOVING:
                 logger.LogInformation($"React to {value.ToStringF()} -- Stop moving!");

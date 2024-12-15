@@ -54,6 +54,22 @@ public sealed partial class ConfigurableInput
         if (input.IsKeyDown(BackwardKey))
             input.SetKeyState(BackwardKey, false, forced);
     }
+    
+    public void PressFixedRandom(ConsoleKey key)
+    {
+        var random = new Random().Next(InputDuration.FastPress, InputDuration.DefaultPress);
+        input.PressFixed(key, random, CancellationToken.None);
+    }
+    
+    public void PerformCoolRotationJump()
+    {
+        input.SetKeyState(ConsoleKey.A, true, false);
+        // wait for 100ms
+        Thread.Sleep(100);
+        PressFixedRandom(ConsoleKey.Spacebar);
+        input.SetKeyState(ConsoleKey.A, false, false);
+        TurnRandomDir(1000);
+    }
 
     public void TurnRandomDir(int milliseconds)
     {

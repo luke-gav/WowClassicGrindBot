@@ -170,7 +170,7 @@ public sealed class ReactCastError
 
                 float beforeDir = playerReader.Direction;
 
-                input.PressFastInteract();
+                input.PerformCoolRotationJump();
 
                 const int updateCount = 2;
                 float e = wait.AfterEquals(playerReader.SpellQueueTimeMs,
